@@ -1,0 +1,70 @@
+.Home {
+  display: flex;
+  width: 100%;
+  margin-top: 5%;
+}
+.section {
+  width: 100%;
+  /* margin-left: 18%; */
+  margin-top: 2%;
+}
+
+.recentContainer {
+  background-color: var(--darkBlueS);
+  height: auto;
+  width: 100%;
+}
+
+.recentDown {
+  display: flex;
+  width: 95%;
+  height: auto;
+  margin: auto;
+  gap: 2%;
+  padding-bottom: 2%;
+  flex-wrap: wrap;
+}
+
+.recentUp {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: auto;
+  padding-top: 2%;
+}
+
+.recentTodo {
+  width: 95%;
+  margin: auto;
+}
+.lineHome {
+  width: 95%;
+  height: 0.5px;
+  background-color: black;
+}
+
+.Assigned {
+  font-size: 16px;
+}
+
+.AssignedHome {
+  font-size: 31px;
+  font-weight: bold;
+  width: 95%;
+  margin: auto auto 1% auto;
+}
+.counter {
+  background-color: var(--lightGrey1);
+  font-size: 12px;
+  padding: 1px 20px;
+  border-radius: 10px;
+}
+.assignedCounter {
+  height: 1%;
+  display: flex;
+  gap: 5%;
+  margin-top: 20px;
+}
+.assignedCounter h2 {
+  line-height: 100%;
+}

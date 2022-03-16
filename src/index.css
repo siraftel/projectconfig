@@ -1,13 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Black and White */
+  --darkGrey: #363636;
+  --grey1: #80848d;
+  --grey2: #c2c3c6;
+  --lightGrey1: #e1e1e1;
+  --lightGrey2: #f3f3f3;
+  /* Primary */
+  --lightBlue: #7fd8ff;
+  --darkBlue: #4859ef;
+  --yellow: #ffd464;
+  --red: #ff706a;
+  --purple: #6d4ddf;
+  --green: #0ee799;
+  --orange: #ff9e57;
+  --darkPurple: #37266c;
+  /* Secondary */
+  --lightBlueS: #e5f7ff;
+  --darkBlueS: #eff1ff;
+  --yellowS: #fdf1cb;
+  --redS: #ffdbda;
+  --purpleS: #ece8fc;
+  --greenS: #e1fcf2;
+  --orangeS: #ffeee1;
+  /* Gradient */
+  --gradientRed: linear-gradient(
+    225deg,
+    #8559d4 0%,
+    #ff736a 59.38%,
+    #ffb667 100%
+  );
+  --gradientBlue: linear-gradient(
+    225deg,
+    #6d4ddf 0%,
+    #779df2 59.38%,
+    #7fcdfd 100%
+  );
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Nunito", sans-serif, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue" !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Courier New", monospace;
+}
+/* Topography */
+h1 {
+  font-size: 28px;
+  line-height: 36px;
+  font-style: bold;
+}
+h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-style: bold;
+}
+h3 {
+  font-size: 21px;
+  line-height: 28px;
+  font-style: bold;
+}
+h4 {
+  font-size: 16px;
+  line-height: 24px;
+  font-style: bold;
+}
+h5 {
+  font-size: 14px;
+  line-height: 21px;
+  font-style: bold;
+}
+.title1 {
+  font-style: bold;
+  font-size: 48px;
+  line-height: 62.4px;
+}
+.title2 {
+  font-style: bold;
+  font-size: 39px;
+  line-height: 50.7px;
+}
+.title3 {
+  font-style: bold;
+  font-size: 31px;
+  line-height: 40.3px;
+}
+.body1 {
+  font-style: none;
+  font-size: 18px;
+  line-height: 27px;
+}
+.body2 {
+  font-style: none;
+  font-size: 16px;
+  line-height: 24px;
+}
+.body3 {
+  font-style: none;
+  font-size: 14px;
+  line-height: 21px;
+}
+.body4 {
+  font-style: none;
+  font-size: 12px;
+  line-height: 18px;
+}
+.body5 {
+  font-style: none;
+  font-size: 11px;
+  line-height: 15px;
+}
+.link1 {
+  font-style: bold underline;
+  font-size: 16px;
+  line-height: 24px;
+}
+.link2 {
+  font-style: bold underline;
+  font-size: 14px;
+  line-height: 21px;
+}
+.link3 {
+  font-style: bold underline;
+  font-size: 12px;
+  line-height: 18px;
+}
+.link4 {
+  font-style: bold underline;
+  font-size: 11px;
+  line-height: 15px;
 }

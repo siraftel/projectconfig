@@ -1,0 +1,196 @@
+/* .bodyAccount {
+  background-color: var(--grey2);
+  width: 100%;
+  height: 100%;
+} */
+.navbar {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  box-shadow: 1px 4px 12px 1px rgba(0, 0, 0, 0.08);
+}
+.navbarLeft {
+  width: 90%;
+  display: flex;
+  gap: 1%;
+  align-items: center;
+}
+.linkbBoards {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: black;
+}
+
+.linkbBoards h5 {
+  margin-top: 8px;
+}
+.accountImageNav {
+  width: 50px;
+  height: 50px;
+  border: var(--grey2) solid 1px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+}
+
+.ImageNavbar {
+  position: relative;
+  object-fit: contain;
+  width: 100%;
+}
+.account {
+  margin: auto;
+  width: 70%;
+  height: 100%;
+  border: var(--grey2) solid 1px;
+  border-top: none;
+}
+.Line {
+  margin-bottom: 2%;
+  width: 90%;
+  margin: auto;
+  height: 1px;
+  background-color: gray;
+}
+.accountPict {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2%;
+}
+.accountNameRole {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+}
+.accountIndustryCompany {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.remove {
+  color: black;
+}
+.containerEmail {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 2% auto 1% auto;
+}
+.containerPassword {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 2% auto 8% auto;
+}
+.accountImage {
+  width: 150px;
+  height: 150px;
+  /* position: absolute; */
+  border: var(--grey2) solid 1px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.Image {
+  position: relative;
+  width: 100%;
+}
+.NavDropdown {
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  border: 1px solid #e1e1e1;
+}
+/* .containerDropdown {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-grow: 1;
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+} */
+.Dropdown {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-grow: 1;
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+}
+.NavDropdown a {
+  color: black;
+}
+
+.inputName {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-grow: 1;
+  border-radius: 5px;
+  border: 1px solid #e1e1e1;
+}
+.accountCompanyName {
+  width: 45%;
+}
+.accountIndustry {
+  width: 45%;
+}
+.accountRole {
+  width: 45%;
+}
+.accountName {
+  width: 45%;
+}
+.photo {
+  background-color: brown;
+  width: 9%;
+  margin-top: 2%;
+  display: none;
+}
+.btnUpload {
+  padding: 7px 25px;
+  background-color: #eff1ff;
+  margin-bottom: 1%;
+  margin-top: 1%;
+  border-radius: 20px;
+  color: #4859ef;
+  cursor: pointer;
+}
+.btnChangeContainer {
+  width: 15%;
+  display: flex;
+  align-items: center;
+}
+.btnChange {
+  padding: 10% 20%;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--orangeS);
+  color: var(--orange);
+}
+.containerSaveLogout {
+  width: 90%;
+  height: 20%;
+  display: flex;
+  gap: 14px;
+  justify-content: flex-end;
+  margin: auto auto 2% auto;
+}
+.btnChangelogout {
+  padding: 1% 5%;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--orangeS);
+  color: var(--orange);
+}

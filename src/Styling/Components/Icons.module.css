@@ -1,0 +1,40 @@
+.icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 7px;
+}
+
+.icon-red {
+  background-color: rgb(216, 69, 69);
+}
+
+.icon-blue {
+  background-color: lightblue;
+}
+
+.icon-green {
+  background-color: lightgreen;
+}
+
+.icon-yellow {
+  background-color: rgb(235, 235, 3);
+}
+
+.icon-purple {
+  background-color: rgb(168, 24, 168);
+}
+@media (max-width: 600px) and (min-width: 425px) {
+  .icon {
+    width: 25px;
+    height: 25px;
+    padding: 3px;
+  }
+}
+@media (max-width: 424px) and (min-width: 0) {
+  .icon {
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+  }
+}
