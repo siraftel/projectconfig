@@ -6,11 +6,13 @@ import Right from "../../Assets/Icons/right blue.png";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserRegister } from "../../Redux/Action/UserAction";
 import { useNavigate } from "react-router";
+
 export default function Register() {
   const error = useSelector((state) => state.getAuthRegister.error);
-  console.log(error);
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   return (
     <div>
       <nav className={style.nav}>
@@ -25,12 +27,19 @@ export default function Register() {
       </nav>
       <div className={style.containerLogin}>
         <Formik
-          initialValues={{ email: "", password: "", name: "", acceptTerm: false }}
+          initialValues={{
+            email: "",
+            password: "",
+            name: "",
+            acceptTerm: false,
+          }}
           validate={(values) => {
             const errors = {};
             if (!values.email) {
               errors.email = "Yang bener apa";
-            } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
+            } else if (
+              !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+            ) {
               errors.email = "Invalid email address";
             }
             if (!values.acceptTerm) {
@@ -45,6 +54,7 @@ export default function Register() {
               .then((res) => {
                 if (res.status === 201 && res?.data?.token) {
                   alert("Please Check your Email");
+                  setSubmitting(false);
                   navigate("/login");
                 }
               })
@@ -61,31 +71,79 @@ export default function Register() {
             handleBlur,
             handleSubmit,
             isSubmitting,
-            /* and other goodies */
           }) => (
             <form onSubmit={handleSubmit} className={style.formSubmit}>
               <div className={style.text}>
                 <h1>Get started free today</h1>
               </div>
-              <input className={style.formInput} type="name" name="name" onChange={handleChange} onBlur={handleBlur} value={values.name} placeholder="Name" />
+              <input
+                className={style.formInput}
+                type="name"
+                name="name"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.name}
+                placeholder="Name"
+              />
               {errors.name && touched.name && errors.name}
-              <input className={style.formInput} type="email" name="email" onChange={handleChange} onBlur={handleBlur} value={values.email} placeholder="Email" />
-              <p className={style.alertError}>{(errors.email && touched.email && errors.email) || error}</p>
-              <input className={style.formInput} type="password" name="password" onChange={handleChange} onBlur={handleBlur} value={values.password} placeholder="Password min 8 characters" />
+              <input
+                className={style.formInput}
+                type="email"
+                name="email"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.email}
+                placeholder="Email"
+              />
+              <p className={style.alertError}>
+                {(errors.email && touched.email && errors.email) || error}
+              </p>
+              <input
+                className={style.formInput}
+                type="password"
+                name="password"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.password}
+                placeholder="Password min 8 characters"
+              />
               {errors.password && touched.password && errors.password}
               <div className={style.checkboxTerms}>
-                <input className={style.checkboxInput} type="checkbox" id="agreeTerms" name="acceptTerm" checked={values.acceptTerm} onChange={handleChange} />
-                <label for="agreeTerms">I agree with Whiteboard’s terms & conditions</label>
+                <input
+                  className={style.checkboxInput}
+                  type="checkbox"
+                  id="agreeTerms"
+                  name="acceptTerm"
+                  checked={values.acceptTerm}
+                  onChange={handleChange}
+                />
+                <label for="agreeTerms">
+                  I agree with Whiteboard’s terms & conditions
+                </label>
               </div>
               {errors.acceptTerm}
-              <button type="submit" className={style.buttonSubmit} disabled={isSubmitting}>
+              <button
+                type="submit"
+                className={style.buttonSubmit}
+                disabled={isSubmitting}
+              >
                 Submit
               </button>
               <p className={style.text}>or sign up with:</p>
               <div>
-                <a className={style.signInMedia} href=" https://whiteboard-product.herokuapp.com/api/v1/auth/google">
+                <a
+                  className={style.signInMedia}
+                  href=" https://whiteboard-product.herokuapp.com/api/v1/auth/google"
+                >
                   <button type="button" className={style.btn_sosialMedia}>
-                    <svg className={style.icon} width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                      className={style.icon}
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <g clipPath="url(#clip0_19_358)">
                         <path
                           d="M6.64863 18.1294L5.60437 22.0277L1.78764 22.1085C0.646992 19.9928 0 17.5723 0 15C0 12.5126 0.604922 10.167 1.67719 8.10164H1.67801L5.07598 8.72461L6.56449 12.1022C6.25295 13.0104 6.08314 13.9854 6.08314 15C6.08326 16.1011 6.28271 17.1561 6.64863 18.1294Z"

@@ -29,7 +29,6 @@ export default function Login() {
     const data = {
       email: value,
     };
-    console.log(data);
     dispatch(changePassword(data));
 
     setValue("");
@@ -38,6 +37,10 @@ export default function Login() {
   useEffect(() => {
     if (messageFail || messageSuccess) {
       alert(`${messageSuccess || messageFail}`);
+    }
+    //Change
+    else {
+      <></>;
     }
   }, [messageFail, messageSuccess]);
 
@@ -86,7 +89,6 @@ export default function Login() {
             handleBlur,
             handleSubmit,
             isSubmitting,
-            /* and other goodies */
           }) => (
             <form onSubmit={handleSubmit} className={style.formSubmit}>
               <div className={style.text}>
